@@ -9,10 +9,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { fancyAnimation } from './animations';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot({
+      navAnimation: fancyAnimation
+    }),
+    AppRoutingModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
